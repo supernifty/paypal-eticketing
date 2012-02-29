@@ -1,0 +1,21 @@
+{% extends "base.htm" %}
+
+{% block title %}Welcome to e-ticketing{% endblock %}
+{% block heading %}Welcome to e-ticketing{% endblock %}
+
+{% block content %}
+<p>{{ items|length }} event{{ items|length|pluralize }} for sale.</p>
+<p>
+<ul>
+{% for item in items %}
+  <li>In <b>{{ item.time_remaining }}</b> on {{ item.expiry|date:"d-M-Y H:i" }} - {{ item.title }} for ${{ item.price_dollars|floatformat:2 }}<br/>
+    <img src="/image/{{ item.key }}/" alt="{{ item.title }}"/><br/>
+    <a href="/buy/{{ item.key }}/">Buy a ticket</a><br/><br/>
+  </li>
+{% endfor %}
+</ul>
+</p>
+<p>
+<a href="/sell">Add event</a>
+</p>
+{% endblock %}
