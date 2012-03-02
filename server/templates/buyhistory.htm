@@ -1,0 +1,25 @@
+{% extends "base.htm" %}
+
+{% block title %}Purchase History{% endblock %}
+{% block heading %}Purchase History{% endblock %}
+
+{% block content %}
+<p>
+<ul>
+{% for purchase in items %}
+  {% ifequal purchase.status 'COMPLETED' %}
+  <li>{{ purchase.item.title }} on {{ purchase.item.expiry|date:"d-M-Y H:i" }}: purchase code <b>{{ purchase.code }}</b><br/>
+    <img src="{{ purchase.qr_code }}"/>
+    <hr/>
+  </li>
+  {% endifequal %}
+  {% ifequal purchase.status 'RETURNED' %}
+  <li>{{ purchase.item.title }} on {{ purchase.item.expiry|date:"d-M-Y H:i" }}: purchase code <b>{{ purchase.code }}</b><br/>
+    <img src="{{ purchase.qr_code }}"/>
+    <hr/>
+  </li>
+  {% endifequal %}
+{% endfor %}
+</ul>
+</p>
+{% endblock %}

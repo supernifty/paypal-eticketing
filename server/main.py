@@ -54,12 +54,17 @@ class Sell(RequestHandler):
 
   @login_required
   def get(self, command=None):
-    self._process()
+    if not model.Profile.is_seller( users.get_current_user() ):
+      self.error(404)
+    else:
+      self._process()
 
   def post(self, command):
     user = users.get_current_user()
     if not user:
       self.redirect( users.create_login_url( "/sell" ) )
+    elif not model.Profile.is_seller( user ):
+      self.error(404)
     else:
       if command == 'add':
         image = self.request.get("image")
@@ -211,7 +216,8 @@ class Profile (RequestHandler):
   @login_required
   def get(self):
     data = {
-      'profile': model.Profile.from_user(users.get_current_user())
+      'profile': model.Profile.from_user(users.get_current_user()),
+      'is_seller': model.Profile.is_seller(users.get_current_user())
     } 
     util.add_user( self.request.uri, data )
     path = os.path.join(os.path.dirname(__file__), 'templates/profile.htm')
@@ -220,7 +226,7 @@ class Profile (RequestHandler):
   def post(self):
     profile = model.Profile.from_user( users.get_current_user() )
     if profile == None:
-      profile = model.Profile( owner = users.get_current_user() )
+      profile = model.Profile( owner=users.get_current_user(), role='buyer' )
     profile.paypal_email = self.request.get('paypal_email')
     profile.put()
     data = { 
@@ -256,12 +262,26 @@ class IPN (RequestHandler):
       logging.debug( "Request was: %s" % self.request.body )
 
 class SellHistory (RequestHandler):
+  @login_required
+  def get(self):
+    if not model.Profile.is_seller( users.get_current_user() ):
+      self.error(404)
+    else:
+      data = {
+        'items': model.Purchase.all().filter( 'owner =', users.get_current_user() ).order('-created').fetch(100),
+      }
+      util.add_user( self.request.uri, data )
+      path = os.path.join(os.path.dirname(__file__), 'templates/sellhistory.htm')
+      self.response.out.write(template.render(path, data))
+
+class BuyHistory (RequestHandler):
+  @login_required
   def get(self):
     data = {
-      'items': model.Purchase.all().filter( 'owner =', users.get_current_user() ).order('-created').fetch(100),
+      'items': model.Purchase.all().filter( 'purchaser =', users.get_current_user() ).order('-created').fetch(100),
     }
     util.add_user( self.request.uri, data )
-    path = os.path.join(os.path.dirname(__file__), 'templates/sellhistory.htm')
+    path = os.path.join(os.path.dirname(__file__), 'templates/buyhistory.htm')
     self.response.out.write(template.render(path, data))
 
 class NotFound (RequestHandler):
@@ -279,6 +299,7 @@ app = webapp.WSGIApplication( [
     ('/profile', Profile),
     ('/ipn/(.*)/(.*)/', IPN),
     ('/sellhistory', SellHistory),
+    ('/buyhistory', BuyHistory),
     ('/.*', NotFound),
   ],
   debug=True)

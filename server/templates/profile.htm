@@ -12,5 +12,8 @@
 </form>
 </div>
 <br/>
-<a href="/sell">Back to seller page</a>
+{% if is_seller %}
+<a href="/sell">Back to seller page</a><br/>
+{% endif %}
+<a href="/buyhistory">Purchase History</a>
 {% endblock %}

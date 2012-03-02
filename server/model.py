@@ -7,10 +7,18 @@ class Profile(db.Model):
   '''extra user details'''
   owner = db.UserProperty()
   paypal_email = db.EmailProperty()  # for payment
+  role = db.StringProperty( choices=( 'seller', 'buyer' ) )
 
   @staticmethod
   def from_user( u ):
     return Profile.all().filter( "owner = ", u ).get()
+
+  @staticmethod
+  def is_seller( u ):
+    if u == None:
+      return False
+    profile = Profile.from_user( u )
+    return profile != None and profile.role == 'seller'
 
 class Item(db.Model):
   '''an item for sale'''
