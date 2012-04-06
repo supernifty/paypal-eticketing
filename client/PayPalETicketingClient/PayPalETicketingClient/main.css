@@ -1,0 +1,30 @@
+body {
+  font-family: "Helvetica";
+  background-color: #ccf;
+}
+
+.box {
+  border: 1px solid #99b;
+  background-color: #fbfbff;
+}
+
+.box_header {
+  background-color: #99b;
+  padding: 3px 10px 3px 10px;
+  font-weight: bold;
+}
+
+.box_content {
+  padding: 16px;
+}
+
+#status {
+  background-color: #fde;
+  padding: 10px 0 10px 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.not_shown {
+  display: none;
+}

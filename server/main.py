@@ -4,6 +4,7 @@ import decimal
 import logging
 import os
 import random
+import simplejson
 
 from google.appengine.api import users
 from google.appengine.ext import db
@@ -284,6 +285,30 @@ class BuyHistory (RequestHandler):
     path = os.path.join(os.path.dirname(__file__), 'templates/buyhistory.htm')
     self.response.out.write(template.render(path, data))
 
+class API (RequestHandler):
+  def get(self):
+    self.response.out.write( simplejson.dumps( { 'status': 'unsupported call method' } ) )
+
+  def post(self):
+    # decode cmd
+    logging.debug( "get: " + self.request.get("json") )
+    req = simplejson.loads( self.request.get("json") )
+    if req['command'] == 'load':
+      # find event
+      try:
+        item = model.Item.all().filter( 'title =', req['title'] ).fetch(1)[0]
+        # return list of attendee codes
+        attendees = model.Purchase.all().filter( 'item =', item )
+        result = []
+        for attendee in attendees:
+          if attendee.status == 'RETURNED' or attendee.status == 'COMPLETED':
+            result.append( { 'code': attendee.code } )
+        self.response.out.write( simplejson.dumps( { 'status': 'ok', 'result': result } ) )
+      except IndexError:
+        self.response.out.write( simplejson.dumps( { 'status': 'event not found' } ) )
+    else:
+      self.response.out.write( simplejson.dumps( { 'status': 'command not recognized' } ) )
+
 class NotFound (RequestHandler):
   def get(self):
     self.error(404)
@@ -300,6 +325,7 @@ app = webapp.WSGIApplication( [
     ('/ipn/(.*)/(.*)/', IPN),
     ('/sellhistory', SellHistory),
     ('/buyhistory', BuyHistory),
+    ('/api', API),
     ('/.*', NotFound),
   ],
   debug=True)

@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D0C1772D152E995300F0FE6A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C1772C152E995300F0FE6A /* UIKit.framework */; };
+		D0C1772F152E995300F0FE6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C1772E152E995300F0FE6A /* Foundation.framework */; };
+		D0C17731152E995300F0FE6A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C17730152E995300F0FE6A /* CoreGraphics.framework */; };
+		D0C17737152E995300F0FE6A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0C17735152E995300F0FE6A /* InfoPlist.strings */; };
+		D0C17739152E995300F0FE6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C17738152E995300F0FE6A /* main.m */; };
+		D0C1773D152E995300F0FE6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C1773C152E995300F0FE6A /* AppDelegate.m */; };
+		D0C17740152E995300F0FE6A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C1773F152E995300F0FE6A /* ViewController.m */; };
+		D0C17743152E995300F0FE6A /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C17741152E995300F0FE6A /* ViewController_iPhone.xib */; };
+		D0C17746152E995300F0FE6A /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C17744152E995300F0FE6A /* ViewController_iPad.xib */; };
+		D0C17751152E9A4D00F0FE6A /* main.htm in Resources */ = {isa = PBXBuildFile; fileRef = D0C17750152E9A4D00F0FE6A /* main.htm */; };
+		D0C17776152EA0A200F0FE6A /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C17770152EA0A100F0FE6A /* libzbar.a */; };
+		D0C17777152EA0A200F0FE6A /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = D0C17772152EA0A100F0FE6A /* zbar-back.png */; };
+		D0C17778152EA0A200F0FE6A /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = D0C17773152EA0A100F0FE6A /* zbar-help.html */; };
+		D0C17779152EA0A200F0FE6A /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = D0C17774152EA0A100F0FE6A /* zbar-helpicons.png */; };
+		D0C1777A152EA0A200F0FE6A /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = D0C17775152EA0A100F0FE6A /* zbar-samples.png */; };
+		D0C1777C152EA0F100F0FE6A /* main.css in Resources */ = {isa = PBXBuildFile; fileRef = D0C1777B152EA0F100F0FE6A /* main.css */; };
+		D0C1777E152EA28C00F0FE6A /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = D0C1777D152EA28C00F0FE6A /* main.js */; };
+		D0C17780152EA5C300F0FE6A /* jquery-1.7.2.min.js in Resources */ = {isa = PBXBuildFile; fileRef = D0C1777F152EA5C300F0FE6A /* jquery-1.7.2.min.js */; };
+		D0C17782152EEAB800F0FE6A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C17781152EEAB800F0FE6A /* AVFoundation.framework */; };
+		D0C17784152EEAC500F0FE6A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C17783152EEAC500F0FE6A /* CoreMedia.framework */; };
+		D0C17786152EEAD500F0FE6A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C17785152EEAD500F0FE6A /* CoreVideo.framework */; };
+		D0C17788152EEB1900F0FE6A /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C17787152EEB1900F0FE6A /* libiconv.dylib */; };
+		D0C1778A152EEB3200F0FE6A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C17789152EEB3200F0FE6A /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D0C17728152E995300F0FE6A /* PayPalETicketingClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PayPalETicketingClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0C1772C152E995300F0FE6A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D0C1772E152E995300F0FE6A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D0C17730152E995300F0FE6A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D0C17734152E995300F0FE6A /* PayPalETicketingClient-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PayPalETicketingClient-Info.plist"; sourceTree = "<group>"; };
+		D0C17736152E995300F0FE6A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D0C17738152E995300F0FE6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0C1773A152E995300F0FE6A /* PayPalETicketingClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PayPalETicketingClient-Prefix.pch"; sourceTree = "<group>"; };
+		D0C1773B152E995300F0FE6A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D0C1773C152E995300F0FE6A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D0C1773E152E995300F0FE6A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D0C1773F152E995300F0FE6A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D0C17742152E995300F0FE6A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		D0C17745152E995300F0FE6A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		D0C17750152E9A4D00F0FE6A /* main.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = main.htm; sourceTree = "<group>"; };
+		D0C1775C152EA0A100F0FE6A /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
+		D0C1775D152EA0A100F0FE6A /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
+		D0C1775E152EA0A100F0FE6A /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		D0C1775F152EA0A100F0FE6A /* ImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScanner.h; sourceTree = "<group>"; };
+		D0C17760152EA0A100F0FE6A /* Processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Processor.h; sourceTree = "<group>"; };
+		D0C17761152EA0A100F0FE6A /* Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scanner.h; sourceTree = "<group>"; };
+		D0C17762152EA0A100F0FE6A /* Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Symbol.h; sourceTree = "<group>"; };
+		D0C17763152EA0A100F0FE6A /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		D0C17764152EA0A100F0FE6A /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		D0C17765152EA0A100F0FE6A /* zbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zbar.h; sourceTree = "<group>"; };
+		D0C17766152EA0A100F0FE6A /* ZBarCameraSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCameraSimulator.h; sourceTree = "<group>"; };
+		D0C17767152EA0A100F0FE6A /* ZBarCaptureReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCaptureReader.h; sourceTree = "<group>"; };
+		D0C17768152EA0A100F0FE6A /* ZBarHelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarHelpController.h; sourceTree = "<group>"; };
+		D0C17769152EA0A100F0FE6A /* ZBarImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImage.h; sourceTree = "<group>"; };
+		D0C1776A152EA0A100F0FE6A /* ZBarImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImageScanner.h; sourceTree = "<group>"; };
+		D0C1776B152EA0A100F0FE6A /* ZBarReaderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderController.h; sourceTree = "<group>"; };
+		D0C1776C152EA0A100F0FE6A /* ZBarReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderView.h; sourceTree = "<group>"; };
+		D0C1776D152EA0A100F0FE6A /* ZBarReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderViewController.h; sourceTree = "<group>"; };
+		D0C1776E152EA0A100F0FE6A /* ZBarSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSDK.h; sourceTree = "<group>"; };
+		D0C1776F152EA0A100F0FE6A /* ZBarSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSymbol.h; sourceTree = "<group>"; };
+		D0C17770152EA0A100F0FE6A /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzbar.a; sourceTree = "<group>"; };
+		D0C17772152EA0A100F0FE6A /* zbar-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-back.png"; sourceTree = "<group>"; };
+		D0C17773152EA0A100F0FE6A /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
+		D0C17774152EA0A100F0FE6A /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
+		D0C17775152EA0A100F0FE6A /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		D0C1777B152EA0F100F0FE6A /* main.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = main.css; sourceTree = "<group>"; };
+		D0C1777D152EA28C00F0FE6A /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
+		D0C1777F152EA5C300F0FE6A /* jquery-1.7.2.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-1.7.2.min.js"; sourceTree = "<group>"; };
+		D0C17781152EEAB800F0FE6A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D0C17783152EEAC500F0FE6A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		D0C17785152EEAD500F0FE6A /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		D0C17787152EEB1900F0FE6A /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		D0C17789152EEB3200F0FE6A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0C17725152E995300F0FE6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0C1778A152EEB3200F0FE6A /* QuartzCore.framework in Frameworks */,
+				D0C17788152EEB1900F0FE6A /* libiconv.dylib in Frameworks */,
+				D0C17786152EEAD500F0FE6A /* CoreVideo.framework in Frameworks */,
+				D0C17784152EEAC500F0FE6A /* CoreMedia.framework in Frameworks */,
+				D0C17782152EEAB800F0FE6A /* AVFoundation.framework in Frameworks */,
+				D0C1772D152E995300F0FE6A /* UIKit.framework in Frameworks */,
+				D0C1772F152E995300F0FE6A /* Foundation.framework in Frameworks */,
+				D0C17731152E995300F0FE6A /* CoreGraphics.framework in Frameworks */,
+				D0C17776152EA0A200F0FE6A /* libzbar.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0C1771D152E995300F0FE6A = {
+			isa = PBXGroup;
+			children = (
+				D0C17789152EEB3200F0FE6A /* QuartzCore.framework */,
+				D0C17787152EEB1900F0FE6A /* libiconv.dylib */,
+				D0C17785152EEAD500F0FE6A /* CoreVideo.framework */,
+				D0C17783152EEAC500F0FE6A /* CoreMedia.framework */,
+				D0C17781152EEAB800F0FE6A /* AVFoundation.framework */,
+				D0C17732152E995300F0FE6A /* PayPalETicketingClient */,
+				D0C1772B152E995300F0FE6A /* Frameworks */,
+				D0C17729152E995300F0FE6A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0C17729152E995300F0FE6A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0C17728152E995300F0FE6A /* PayPalETicketingClient.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0C1772B152E995300F0FE6A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0C1772C152E995300F0FE6A /* UIKit.framework */,
+				D0C1772E152E995300F0FE6A /* Foundation.framework */,
+				D0C17730152E995300F0FE6A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0C17732152E995300F0FE6A /* PayPalETicketingClient */ = {
+			isa = PBXGroup;
+			children = (
+				D0C17758152EA0A100F0FE6A /* ZBarSDK */,
+				D0C1773B152E995300F0FE6A /* AppDelegate.h */,
+				D0C1773C152E995300F0FE6A /* AppDelegate.m */,
+				D0C1773E152E995300F0FE6A /* ViewController.h */,
+				D0C1773F152E995300F0FE6A /* ViewController.m */,
+				D0C17741152E995300F0FE6A /* ViewController_iPhone.xib */,
+				D0C17744152E995300F0FE6A /* ViewController_iPad.xib */,
+				D0C17733152E995300F0FE6A /* Supporting Files */,
+			);
+			path = PayPalETicketingClient;
+			sourceTree = "<group>";
+		};
+		D0C17733152E995300F0FE6A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0C1777F152EA5C300F0FE6A /* jquery-1.7.2.min.js */,
+				D0C17734152E995300F0FE6A /* PayPalETicketingClient-Info.plist */,
+				D0C17735152E995300F0FE6A /* InfoPlist.strings */,
+				D0C17738152E995300F0FE6A /* main.m */,
+				D0C1773A152E995300F0FE6A /* PayPalETicketingClient-Prefix.pch */,
+				D0C1777B152EA0F100F0FE6A /* main.css */,
+				D0C17750152E9A4D00F0FE6A /* main.htm */,
+				D0C1777D152EA28C00F0FE6A /* main.js */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0C17758152EA0A100F0FE6A /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				D0C17759152EA0A100F0FE6A /* Headers */,
+				D0C17770152EA0A100F0FE6A /* libzbar.a */,
+				D0C17771152EA0A100F0FE6A /* Resources */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		D0C17759152EA0A100F0FE6A /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				D0C1775A152EA0A100F0FE6A /* ZBarSDK */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		D0C1775A152EA0A100F0FE6A /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				D0C1775B152EA0A100F0FE6A /* zbar */,
+				D0C17765152EA0A100F0FE6A /* zbar.h */,
+				D0C17766152EA0A100F0FE6A /* ZBarCameraSimulator.h */,
+				D0C17767152EA0A100F0FE6A /* ZBarCaptureReader.h */,
+				D0C17768152EA0A100F0FE6A /* ZBarHelpController.h */,
+				D0C17769152EA0A100F0FE6A /* ZBarImage.h */,
+				D0C1776A152EA0A100F0FE6A /* ZBarImageScanner.h */,
+				D0C1776B152EA0A100F0FE6A /* ZBarReaderController.h */,
+				D0C1776C152EA0A100F0FE6A /* ZBarReaderView.h */,
+				D0C1776D152EA0A100F0FE6A /* ZBarReaderViewController.h */,
+				D0C1776E152EA0A100F0FE6A /* ZBarSDK.h */,
+				D0C1776F152EA0A100F0FE6A /* ZBarSymbol.h */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		D0C1775B152EA0A100F0FE6A /* zbar */ = {
+			isa = PBXGroup;
+			children = (
+				D0C1775C152EA0A100F0FE6A /* Decoder.h */,
+				D0C1775D152EA0A100F0FE6A /* Exception.h */,
+				D0C1775E152EA0A100F0FE6A /* Image.h */,
+				D0C1775F152EA0A100F0FE6A /* ImageScanner.h */,
+				D0C17760152EA0A100F0FE6A /* Processor.h */,
+				D0C17761152EA0A100F0FE6A /* Scanner.h */,
+				D0C17762152EA0A100F0FE6A /* Symbol.h */,
+				D0C17763152EA0A100F0FE6A /* Video.h */,
+				D0C17764152EA0A100F0FE6A /* Window.h */,
+			);
+			path = zbar;
+			sourceTree = "<group>";
+		};
+		D0C17771152EA0A100F0FE6A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D0C17772152EA0A100F0FE6A /* zbar-back.png */,
+				D0C17773152EA0A100F0FE6A /* zbar-help.html */,
+				D0C17774152EA0A100F0FE6A /* zbar-helpicons.png */,
+				D0C17775152EA0A100F0FE6A /* zbar-samples.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0C17727152E995300F0FE6A /* PayPalETicketingClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0C17749152E995300F0FE6A /* Build configuration list for PBXNativeTarget "PayPalETicketingClient" */;
+			buildPhases = (
+				D0C17724152E995300F0FE6A /* Sources */,
+				D0C17725152E995300F0FE6A /* Frameworks */,
+				D0C17726152E995300F0FE6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PayPalETicketingClient;
+			productName = PayPalETicketingClient;
+			productReference = D0C17728152E995300F0FE6A /* PayPalETicketingClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0C1771F152E995300F0FE6A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = D0C17722152E995300F0FE6A /* Build configuration list for PBXProject "PayPalETicketingClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D0C1771D152E995300F0FE6A;
+			productRefGroup = D0C17729152E995300F0FE6A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0C17727152E995300F0FE6A /* PayPalETicketingClient */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0C17726152E995300F0FE6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0C1777E152EA28C00F0FE6A /* main.js in Resources */,
+				D0C17780152EA5C300F0FE6A /* jquery-1.7.2.min.js in Resources */,
+				D0C17737152E995300F0FE6A /* InfoPlist.strings in Resources */,
+				D0C17743152E995300F0FE6A /* ViewController_iPhone.xib in Resources */,
+				D0C17746152E995300F0FE6A /* ViewController_iPad.xib in Resources */,
+				D0C17751152E9A4D00F0FE6A /* main.htm in Resources */,
+				D0C17777152EA0A200F0FE6A /* zbar-back.png in Resources */,
+				D0C17778152EA0A200F0FE6A /* zbar-help.html in Resources */,
+				D0C17779152EA0A200F0FE6A /* zbar-helpicons.png in Resources */,
+				D0C1777A152EA0A200F0FE6A /* zbar-samples.png in Resources */,
+				D0C1777C152EA0F100F0FE6A /* main.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0C17724152E995300F0FE6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0C17739152E995300F0FE6A /* main.m in Sources */,
+				D0C1773D152E995300F0FE6A /* AppDelegate.m in Sources */,
+				D0C17740152E995300F0FE6A /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D0C17735152E995300F0FE6A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0C17736152E995300F0FE6A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D0C17741152E995300F0FE6A /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0C17742152E995300F0FE6A /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		D0C17744152E995300F0FE6A /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0C17745152E995300F0FE6A /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0C17747152E995300F0FE6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D0C17748152E995300F0FE6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0C1774A152E995300F0FE6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PayPalETicketingClient/PayPalETicketingClient-Prefix.pch";
+				INFOPLIST_FILE = "PayPalETicketingClient/PayPalETicketingClient-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/PayPalETicketingClient/ZBarSDK\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D0C1774B152E995300F0FE6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PayPalETicketingClient/PayPalETicketingClient-Prefix.pch";
+				INFOPLIST_FILE = "PayPalETicketingClient/PayPalETicketingClient-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/PayPalETicketingClient/ZBarSDK\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0C17722152E995300F0FE6A /* Build configuration list for PBXProject "PayPalETicketingClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0C17747152E995300F0FE6A /* Debug */,
+				D0C17748152E995300F0FE6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0C17749152E995300F0FE6A /* Build configuration list for PBXNativeTarget "PayPalETicketingClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0C1774A152E995300F0FE6A /* Debug */,
+				D0C1774B152E995300F0FE6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0C1771F152E995300F0FE6A /* Project object */;
+}

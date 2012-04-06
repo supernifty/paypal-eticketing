@@ -28,7 +28,7 @@ def random_alnum( count ):
     result += random.choice(chars)
   return result
 
-def random_lowercse( count ):
+def random_lowercase( count ):
   chars = string.lowercase
   result = ''
   for i in range(count):

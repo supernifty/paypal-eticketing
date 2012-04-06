@@ -60,7 +60,7 @@ class Purchase(db.Model):
   owner = db.UserProperty()
   purchaser = db.UserProperty()
   created = db.DateTimeProperty(auto_now_add=True)
-  status = db.StringProperty( choices=( 'NEW', 'CREATED', 'ERROR', 'CANCELLED', 'RETURNED', 'COMPLETED' ) )
+  status = db.StringProperty( choices=( 'NEW', 'CREATED', 'ERROR', 'CANCELLED', 'RETURNED', 'COMPLETED', 'ATTENDED' ) )
   status_detail = db.StringProperty()
   secret = db.StringProperty() # to verify return_url
   code = db.StringProperty() # to validate
