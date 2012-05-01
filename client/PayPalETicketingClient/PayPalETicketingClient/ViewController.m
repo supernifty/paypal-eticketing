@@ -102,6 +102,7 @@
     // set code on web page
     [web stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"eticketing.set_code( '%s' )", [symbol.data UTF8String]]];
 
+    [reader dismissModalViewControllerAnimated: YES];
     [reader release];
 }
 

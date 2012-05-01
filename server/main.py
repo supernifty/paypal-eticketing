@@ -306,6 +306,21 @@ class API (RequestHandler):
         self.response.out.write( simplejson.dumps( { 'status': 'ok', 'result': result } ) )
       except IndexError:
         self.response.out.write( simplejson.dumps( { 'status': 'event not found' } ) )
+    elif req['command'] == 'validate':
+      # find event
+      try:
+        item = model.Item.all().filter( 'title =', req['title'] ).fetch(1)[0]
+        attendee = model.Purchase.all().filter( 'code =', req['candidate'] ).filter( 'item =', item ).fetch(1)[0]
+        if attendee.status == 'RETURNED' or attendee.status == 'COMPLETED':
+          attendee.status = 'ATTENDED'
+          attendee.put()
+          self.response.out.write( simplejson.dumps( { 'status': 'ok', 'candidate': req['candidate'] } ) )
+        elif attendee.status == 'ATTENDED':
+          self.response.out.write( simplejson.dumps( { 'status': 'ticket already validated' } ) )
+        else:
+          self.response.out.write( simplejson.dumps( { 'status': 'purchase process not completed' } ) )
+      except IndexError:
+        self.response.out.write( simplejson.dumps( { 'status': 'event or code not found' } ) )
     else:
       self.response.out.write( simplejson.dumps( { 'status': 'command not recognized' } ) )
 
